@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Trailer extends Model
 {
     use HasFactory;
+    protected $table = 'trailer_urls';
     protected $guarded = [];
 }
