@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware('role:admin')->get('/admin' , function (){
+    return "admin section";
+})->name('admin.index');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
