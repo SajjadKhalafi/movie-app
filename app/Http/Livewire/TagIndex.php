@@ -15,7 +15,7 @@ class TagIndex extends Component
 
     public function mount()
     {
-        $this->tags = Tag::all();
+        $this->tags = Tag::all()->sortByDesc('updated_at');
     }
 
     public function showCreateModal()

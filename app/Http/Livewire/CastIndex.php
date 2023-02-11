@@ -86,7 +86,7 @@ class CastIndex extends Component
     public function render()
     {
         return view('livewire.cast-index', [
-            'casts' => Cast::paginate(5)
+            'casts' => Cast::orderBy('updated_at', 'desc')->paginate(7)
         ]);
     }
 }
